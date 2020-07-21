@@ -15,12 +15,12 @@ import java.util.Date;
 public class Product {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name="id")
+    @Column(name = "id")
     private Long id;
 
     @ManyToOne
     @JoinColumn(name = "category_id", nullable = false)
-    private ProductCategory productCategory;
+    private ProductCategory category;
 
     @Column(name="sku")
     private String sku;
