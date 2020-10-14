@@ -1,0 +1,35 @@
+version: '3.3'
+
+services:
+  app-server:
+    image: ahmedgabercod/ecommerce:latest
+    ports:
+      - "8080:8080"
+    restart: always
+    depends_on:
+      - mysql
+    networks:
+      - turingmysql
+
+  mysql:
+    image: mysql:5.7
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: ecommerce
+      MYSQL_USER: admin
+      MYSQL_PASSWORD: admin1234
+
+    volumes:
+      - db-data:/var/lib/mysql
+      - ./database:/docker-entrypoint-initdb.d
+    tty: true
+    networks:
+      - turingmysql
+
+volumes:
+  db-data:
+networks:
+  turingmysql:
+    external: true

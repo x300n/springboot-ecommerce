@@ -2,6 +2,16 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
+    <repositories>
+        <repository>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+            <id>gremlin</id>
+            <name>The Gremlin Repository</name>
+            <url>https://maven.gremlin.com/</url>
+        </repository>
+    </repositories>
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
@@ -55,6 +65,33 @@
                 </exclusion>
             </exclusions>
         </dependency>
+
+
+<!--        <dependency>-->
+<!--            <groupId>com.gremlin</groupId>-->
+<!--            <artifactId>alfi-core</artifactId>-->
+<!--            <version>LATEST</version>-->
+<!--        </dependency>-->
+<!--        <dependency>-->
+<!--            <groupId>com.gremlin</groupId>-->
+<!--            <artifactId>alfi-aws</artifactId>-->
+<!--            <version>LATEST</version>-->
+<!--        </dependency>-->
+<!--        <dependency>-->
+<!--            <groupId>com.gremlin</groupId>-->
+<!--            <artifactId>alfi-apache-http-client</artifactId>-->
+<!--            <version>LATEST</version>-->
+<!--        </dependency>-->
+<!--        <dependency>-->
+<!--            <groupId>com.gremlin</groupId>-->
+<!--            <artifactId>alfi-http-servlet-filter</artifactId>-->
+<!--            <version>LATEST</version>-->
+<!--        </dependency>-->
+<!--        <dependency>-->
+<!--            <groupId>com.gremlin</groupId>-->
+<!--            <artifactId>alfi-aws-dynamodb-client</artifactId>-->
+<!--            <version>LATEST</version>-->
+<!--        </dependency>-->
     </dependencies>
 
     <build>
